@@ -65,7 +65,7 @@ class BoundedBuffer {
     proc done() : void {
     	 // set done to true to prevent all potential new
 	 // reader from waiting.
-    	 //all_done = true;
+    	 all_done = true;
 	 // release all readers already waiting (if any).
 	 while (head != tail) {
 	       buff$[head] = TERM;
